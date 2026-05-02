@@ -22,7 +22,7 @@ const projects = [
     github: "https://github.com/dlee922/cs6140-final-project-jc-dl",
   },
   {
-    tag: "Course Project",
+    tag: "Independent Project",
     title: "LUAD Mutation Landscape & Survival Analysis (TCGA)",
     date: "October 2025 \u2013 January 2026",
     description:
@@ -45,10 +45,10 @@ export default function Projects() {
           </p>
         </RevealSection>
 
-        <div className="card-grid">
-          {projects.map((project, i) => (
-            <RevealSection key={project.title} delay={100 + i * 100}>
-              <div className="card">
+        <RevealSection delay={100}>
+          <div className="card-grid">
+            {projects.map((project) => (
+              <div className="card" key={project.title}>
                 <p className="card-tag">
                   {project.tag} &middot; {project.date}
                 </p>
@@ -65,9 +65,9 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
-            </RevealSection>
-          ))}
-        </div>
+            ))}
+          </div>
+        </RevealSection>
       </section>
     </div>
   );

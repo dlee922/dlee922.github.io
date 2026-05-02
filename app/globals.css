@@ -289,8 +289,7 @@ p {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--nav-bg);
-    backdrop-filter: blur(20px);
+    background: var(--bg-primary);
     border-bottom: 1px solid var(--border);
     padding: 16px 24px;
     gap: 4px;
@@ -602,6 +601,12 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 32px;
+}
+
+@media (max-width: 540px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-item {
