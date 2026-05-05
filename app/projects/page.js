@@ -8,9 +8,11 @@ const projects = [
     title: "Cross-Disorder Psychiatric GWAS Clustering",
     date: "April 2026 \u2013 Present",
     description:
-      "Extended the Grotzinger et al. (Nature, 2026) cross-disorder Genomic SEM framework to investigate locus-level subtypes of pleiotropy across five psychiatric genomic factors, using PGC summary statistics spanning 14 disorders. Identified three distinct subtypes at k=3 (n=611 loci), including a 74-locus antagonistic pleiotropy cluster showing opposing effects between internalizing and psychotic-spectrum disorders, enriched for cell adhesion and cadherin signaling pathways. Clusters validated using Q_P heterogeneity statistics with monotonic gradients across all five factors (Kruskal\u2013Wallis p < 0.001).",
+      "Extended the Grotzinger et al. (Nature, 2026) cross-disorder Genomic SEM framework to investigate locus-level subtypes of pleiotropy across five psychiatric genomic factors, using PGC summary statistics spanning 14 disorders. Applied k-means clustering (corroborated by hierarchical clustering, GMM, and DBSCAN) to identify three distinct subtypes at k=3 (n=611 loci), including a 74-locus antagonistic pleiotropy cluster showing opposing effects between internalizing and psychotic-spectrum disorders, enriched for cell adhesion and cadherin signaling pathways. Clusters validated using Q_P heterogeneity statistics with monotonic gradients across all five factors (Kruskal\u2013Wallis p < 0.001).",
     tools: "Python (pandas, scikit-learn, scipy), g:Profiler",
     github: "https://github.com/dlee922/psychiatric-gwas-pleiotropy",
+    paper: "/gwas_pleiotropy_clustering.pdf",
+    paperLabel: "Preliminary Report",
   },
   {
     tag: "Course Project",
@@ -20,6 +22,8 @@ const projects = [
       "Multi-label classification pipeline predicting metastatic organotropism across 7 anatomical sites using clinical and genomic features from the MSK-MET cohort (Memorial Sloan Kettering, Cancer Cell 2023, n=455, via cBioPortal). Built a ClassifierChain pipeline comparing linear and nonlinear models, including a PyTorch MLP with per-label positive weighting. Found that linear models with L2 regularization generalized best, while the MLP showed significant overfitting at this sample size. Conducted a demographic fairness audit across sex and race subgroups.",
     tools: "Python (scikit-learn, PyTorch, pandas), cBioPortal API",
     github: "https://github.com/dlee922/cs6140-final-project-jc-dl",
+    paper: "/LUAD_Metastatic_Site_Classification.pdf",
+    paperLabel: "Project Report",
   },
   {
     tag: "Independent Project",
@@ -63,6 +67,15 @@ export default function Projects() {
                   >
                     GitHub Repository &rarr;
                   </a>
+                  {project.paper && (
+                    <a
+                      href={project.paper}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.paperLabel} &rarr;
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
