@@ -36,10 +36,10 @@ export default function About() {
               conducting an independent project extending the Grotzinger et al.
               (Nature, 2026) cross-disorder Genomic SEM framework, using
               unsupervised clustering to uncover distinct subtypes of genetic
-              pleiotropy across psychiatric disorders. What has pulled me deeper
-              into this field is the sense that this work is at the frontier of
-              something significant, and that the questions I am asking do not
-              yet have answers.
+              pleiotropy across psychiatric disorders. What has pulled me deeper 
+              into this field is the belief that this work has the potential to 
+              change how we understand and treat mental illness, and that the questions 
+              being asked today could lead to real improvements in people's lives.
             </p>
 
             <p>
